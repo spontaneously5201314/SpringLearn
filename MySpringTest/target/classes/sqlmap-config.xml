@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD SQL Map Config 3.0//EN"  
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+    
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.youxigu.spring.person.domain.Person" alias="person"/>
+		<typeAlias type="com.youxigu.spring.car.domain.Car" alias="car"/>
+	</typeAliases>
+	<mappers>
+		<mapper resource="mapper/car.xml"/>
+		<mapper resource="mapper/person.xml"/>
+	</mappers>
+</configuration>

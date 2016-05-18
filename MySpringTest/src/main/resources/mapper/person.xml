@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.youxigu.spring.person.mapper.PersonMapper">
+	<cache type="PERPETUAL" eviction="LRU" flushInterval="60000" size="512" readOnly="true" />
+	<resultMap type="Person" id="person">
+		<id column="id" property="id"/>  
+        <result column="name" property="name"/>  
+        <result column="age" property="age"/> 
+	</resultMap>
+	<select id="getPerson" resultMap="person">
+		select * from person
+	</select>
+</mapper>
